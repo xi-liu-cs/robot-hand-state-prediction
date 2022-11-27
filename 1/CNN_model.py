@@ -163,7 +163,7 @@ class CNN:
         return model
 
     def main(self):
-        model = self.ResNet101(num_classes=12, channels=4)
+        model = self.ResNet50(num_classes=12, channels=4)
         model = model.to(self.device)
 
         loss_function = torch.nn.MSELoss()
@@ -173,7 +173,7 @@ class CNN:
         tr_data, tr_y, te_data = read_prep_data[0], read_prep_data[1], read_prep_data[2]
 
         dataset_train = TensorDataset(Tensor(tr_data), Tensor(tr_y))
-        train_dataloader = DataLoader(dataset=dataset_train, batch_size=32, shuffle=True, num_workers=2)
+        train_dataloader = DataLoader(dataset=dataset_train, batch_size=16, shuffle=True, num_workers=2)
 
         model = self.train_model(dataloader=train_dataloader, model=model, loss_fn=loss_function, optimizer=optimizer, n_epoch=20)
 
