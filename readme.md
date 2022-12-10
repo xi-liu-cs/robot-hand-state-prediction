@@ -34,7 +34,7 @@ dump(train_img0, 'preprocessed_testX.joblib')
 ```
 
 ### train model
-use 
+start to train the model by calling ```cnn_model.main()```, many architectures are used 
 ```python
 cnn_model = cnn_model.main(loadname = 'lx_preprocessed_data0.joblib', pre_trained_model = None)
 ```
