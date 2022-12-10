@@ -6,6 +6,7 @@ Each sample is made of three images from three different views. A custom dataset
 
 ## method
 ### data preprocessing
+A custem data processing class ```Data_Preprocessing``` is implemented in ```CNN_model.py```
 ```python
 dp = CNN_model.Data_Preprocessing()
 ```
