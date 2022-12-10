@@ -38,3 +38,9 @@ start to train the model by calling ```cnn_model.main()```, many residual neural
 ```python
 cnn_model = cnn_model.main(loadname = 'lx_preprocessed_data0.joblib', pre_trained_model = None)
 ```
+
+### experimental results
+
+### discussion
+
+### future work
