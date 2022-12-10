@@ -34,7 +34,7 @@ dump(train_img0, 'preprocessed_testX.joblib')
 ```
 
 ### train model
-start to train the model by calling ```cnn_model.main()```, many architectures are used 
+start to train the model by calling ```cnn_model.main()```, many residual neural network architectures are used, including ResNet50, ResNet101, and ResNet152. 
 ```python
 cnn_model = cnn_model.main(loadname = 'lx_preprocessed_data0.joblib', pre_trained_model = None)
 ```
