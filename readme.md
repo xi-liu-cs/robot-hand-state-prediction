@@ -36,5 +36,5 @@ dump(train_img0, 'preprocessed_testX.joblib')
 ### train model
 use 
 ```python
-cnn_model = cnn_model.main(loadname = 'lx_preprocessed_data1.joblib', pre_trained_model = None)
+cnn_model = cnn_model.main(loadname = 'lx_preprocessed_data0.joblib', pre_trained_model = None)
 ```
