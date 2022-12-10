@@ -32,3 +32,7 @@ combine ```ready_img_train``` and ```y_array``` into one array, and save that da
 train_img0 = [ready_img_train, y_array]
 dump(train_img0, 'preprocessed_testX.joblib')
 ```
+use 
+```python
+cnn_model = cnn_model.main(loadname = 'lx_preprocessed_data1.joblib', pre_trained_model = None)
+```
