@@ -11,8 +11,8 @@ dp = CNN_model.Data_Preprocessing()
 ```
 load ```data_train``` and ```data_test``` using custom data loader
 ```python
-data_train = CNN_model.load_images(path='./lazydata/', isTrain = True)
-data_test = CNN_model.load_images(path='./lazydata/', isTrain = False)
+data_train = CNN_model.load_images(path = './lazydata/', isTrain = True)
+data_test = CNN_model.load_images(path = './lazydata/', isTrain = False)
 ```
 convert ```data_train``` and ```data_test``` from tensor to array
 ```python
