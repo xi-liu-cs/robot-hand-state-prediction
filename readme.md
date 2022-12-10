@@ -9,14 +9,13 @@ Each sample is made of three images from three different views. A custom dataset
 ```python
 dp = CNN_model.Data_Preprocessing()
 ```
-* load ```data_train``` and ```data_test``` using custom data loader
+load ```data_train``` and ```data_test``` using custom data loader
 ```python
 data_train = CNN_model.load_images(path='./lazydata/', isTrain = True)
 data_test = CNN_model.load_images(path='./lazydata/', isTrain = False)
 ```
-* convert ```data_train``` and ```data_test``` from tensor to array
+convert ```data_train``` and ```data_test``` from tensor to array
 ```python
 img0_array_test, img1_array_test, img2_array_test, depth_array_test, field_id_array = dp.tensorToArray(data = data_test, isTrain = False)
 img0_array_train, img1_array_train, img2_array_train, depth_array_train, y_array = dp.tensorToArray(data = data_train, isTrain = True)
 ```
-*  
