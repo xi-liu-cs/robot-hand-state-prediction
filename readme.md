@@ -3,4 +3,4 @@ This project is state prediction given RGBD (RGB + Depth) images. The input is R
 Each sample is made of three images from three different views. A custom dataset class is defined for lazy loading to deal with out of memory issue.
 
 ## method
-## data preprocessing
+### data preprocessing
