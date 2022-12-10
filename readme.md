@@ -21,8 +21,8 @@ img0_array_train, img1_array_train, img2_array_train, depth_array_train, y_array
 ```
 normalize depth and image
 ```python
-normalized_depth_train = dp.depth_normalization(depth=depth_array_train)
-normalized_img0_train = dp.img_normalization(img=img0_array_train)
-new_img_train = dp.combine_image_depth(img=normalized_img0_train, depth=normalized_depth_train, whichImg = 0)
+normalized_depth_train = dp.depth_normalization(depth = depth_array_train)
+normalized_img0_train = dp.img_normalization(img = img0_array_train)
+new_img_train = dp.combine_image_depth(img = normalized_img0_train, depth = normalized_depth_train, whichImg = 0)
 ready_img_train = dp.reshape_data(new_img_train)
 ```
