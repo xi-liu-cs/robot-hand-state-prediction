@@ -27,3 +27,8 @@ normalized_img0_train = dp.img_normalization(img = img0_array_train)
 new_img_train = dp.combine_image_depth(img = normalized_img0_train, depth = normalized_depth_train, whichImg = 0)
 ready_img_train = dp.reshape_data(new_img_train)
 ```
+combine ```ready_img_train``` and ```y_array``` into one array, and save that data ```joblib.dump()``` as a ```.joblib``` file
+```python
+train_img0 = [ready_img_train, y_array]
+dump(train_img0, 'preprocessed_testX.joblib')
+```
