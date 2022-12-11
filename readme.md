@@ -64,11 +64,12 @@ let $\mathcal{F}$ be the class of functions the the network architecture can sat
 {
 \forall f \in \mathcal{F}, \exists \text{ weights, biases that can be obtained through training }\\
 \text{let $f ^ *$ be the truth function to be find, usually $f ^ * \not\in \mathcal{F}$, so find a $f_{\mathcal{F}} ^ * \in \mathcal{F}$ that is close to $f$}\\
-f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}\\
+L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}\\
 \text{weights of neural network}\\
 \{\alpha_{0m}, \alpha_m; m = 1, 2, ..., M \in \mathbb{N}\} \quad M(p + 1) \text{ weights }\\
 \{\beta_{0k}, \beta_k; k = 1, 2, ..., K \in \mathbb{N}\} \quad K(M + 1) \text{ weights }\\
 \text{sum of squares error} \quad R(\theta) = \sum_{k = 1} ^ K \sum_{i = 1} ^ N (y_{ik} - f_k(x_i)) ^ 2\\
+\text{suppose there is a better architecture } \mathcal{F'}, \sup\{|f_{\mathcal{F'}} ^ *| - |f ^ *|\} < \sup\{|f_{\mathcal{F}} ^ *| - |f ^ *|\}\\
 }
 ```
 
