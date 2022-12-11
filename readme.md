@@ -41,7 +41,7 @@ cnn_model = cnn_model.main(loadname = 'lx_preprocessed_data0.joblib', pre_traine
 
 ### experimental results
 image 0, 1, 2 represent 3 images of 3 different views in each sample<br>
-Using ResNet50 with image 0 received a root mean square error score of 0.00863.<br>
+Using ResNet50 with image 0 received a root mean square error score of 0.00707.<br>
 Using ResNet50 with image 0, 1, 2 combined and using image 0 as test x received a root mean square error score of 57.29925.<br>
 Using ResNet50 with image 0, 1, 2 combined and using image 1 as test x received a root mean square error score of 56.26985.<br>
 Using ResNet50 with image 0, 1, 2 combined and using image 2 as test x received a root mean square error score of 63.34214.<br>
