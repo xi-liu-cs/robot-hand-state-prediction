@@ -62,7 +62,8 @@ let $\mathcal{F}$ be the class of functions the the network architecture can sat
 ```math
 \displaylines
 {
-\forall f \in \mathcal{F}, \exists \text{ weights } w, \text{ biases } b\\
+\forall f \in \mathcal{F}, \exists \text{ weights, biases that can be obtained through training }\\
+\text{let $f*$ be the truth function to be find, usually $f \not\in \mathcal{F}$, so find a $f_{\mathcal{F}} ^ * \in \mathcal{F}$ that is close to $f$}\\
 f_{\mathcal{F}} ^ * = arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}
 }
 ```
