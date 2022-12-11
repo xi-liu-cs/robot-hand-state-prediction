@@ -42,8 +42,11 @@ model_scripted.save('res50_pretrained_model.pt') # save model
 sub = submission.Submission()
 df = sub.submit(filename = 'preprocessed_testX.joblib', modelname = 'res50_pretrained_model.pt)
 ```
+let $\mathcal{F}$ be the class of functions the the network architecture can satisfy 
 ```math
-f_{\mathcal{F}} ^ * = arg\,min_f L(X, y, f) \text{ subject to } f \in \mathscr{F}
+\forall f \in \mathcal{F}, \exists \text{ weights } w, \text{ biases } b\\
+f_{\mathcal{F}} ^ * = arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}\\
+
 ```
 
 ### experimental results
