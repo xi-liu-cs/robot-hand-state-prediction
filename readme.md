@@ -30,7 +30,7 @@ ready_img_train = dp.reshape_data(new_img_train)
 combine ```ready_img_train``` and ```y_array``` into one array, and save that data persistently as a ```.joblib``` file using ```joblib.dump()```
 ```python
 train_img0 = [ready_img_train, y_array]
-dump(train_img0, 'preprocessed_testX.joblib')
+dump(train_img0, 'lx_preprocessed_data0.joblib')
 ```
 
 ### train model
@@ -41,6 +41,9 @@ model_scripted = torch.jit.script(cnn_model)
 model_scripted.save('res50_pretrained_model.pt') # save model
 sub = submission.Submission()
 df = sub.submit(filename = 'preprocessed_testX.joblib', modelname = 'res50_pretrained_model.pt)
+```
+```math
+f_{\mathscr{F}} ^ * = \argmin_f L(X, y, f) \text{ subject to } f \in \mathscr{F}
 ```
 
 ### experimental results
