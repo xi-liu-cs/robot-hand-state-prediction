@@ -54,7 +54,7 @@ L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ 
 \{\beta_{0k}, \beta_k; k = 1, 2, ..., K \in \mathbb{N}\} \quad K(M + 1) \text{ weights }\\
 \text{sum of squares error} \quad R(\theta) = \sum_{k = 1} ^ K \sum_{i = 1} ^ N (y_{ik} - f_k(x_i)) ^ 2\\
 \text{suppose there is a better architecture } \mathcal{F'}, \sup\{|f_{\mathcal{F'}} ^ *| - |f ^ *|\} < \sup\{|f_{\mathcal{F}} ^ *| - |f ^ *|\}\\
-\text{but, if $\mathcal{F} \not\subset \mathcal{F'}, f_{\mathcal{F'}} ^ *$ move closer to $f ^ *$ is not guaranteed to happen with a larger function class}\\
+\text{but, if $\mathcal{F} \not\subset \mathcal{F'}, f_{\mathcal{F'}} ^ *$ move closer to $f ^ *$ is not guaranteed with a larger function class}\\
 \text{so use nested function classes } \mathcal{F}_1 \subset ... \subset \mathcal{F}_{n \in \mathbb{N}}\\
 \text{so if smaller function classes are subsets of the larger function classes, we can obtain more closeness to $f ^ *$ as we increase $\mathcal{F}$}\\
 \text{so train the new layers into identity function } f(\mathbf{x}) = \mathbf{x} \text{ as one of the elements in each additional layer using a residual block}\\
@@ -77,6 +77,7 @@ class Block(nn.Module):
         self.stride = stride
         self.relu = nn.ReLU()
 ```
+
 
 ### experimental results
 image 0, 1, 2 represent 3 images of 3 different views in each sample<br>
