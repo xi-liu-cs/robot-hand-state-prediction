@@ -46,7 +46,7 @@ let $\mathcal{F}$ be the class of functions the the network architecture can sat
 ```math
 \displaylines
 {
-\forall f \in \mathcal{F}, \exists \text{ weights } w, \text{ biases } b
+\forall f \in \mathcal{F}, \exists \text{ weights } w, \text{ biases } b\\
 f_{\mathcal{F}} ^ * = arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}
 }
 ```
