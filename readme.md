@@ -42,14 +42,14 @@ cnn_model = cnn_model.main(loadname = 'lx_preprocessed_data0.joblib', pre_traine
 ### experimental results
 image 0, 1, 2 represent 3 images of 3 different views in each sample<br>
 Using ResNet50 with image 0 with 20 epochs received a root mean square error score of 0.00707.<br>
-Using ResNet50 with image 1 with 10 epochs received a root mean square error score of 0.04131.<br>
-Using ResNet50 with image 0, 1, 2 combined and using image 0 as test x received a root mean square error score of 0.03367.<br>
-Using ResNet50 with image 0, 1, 2 combined and using image 1 as test x received a root mean square error score of 56.26985.<br>
-Using ResNet50 with image 0, 1, 2 combined and using image 2 as test x received a root mean square error score of 63.34214.<br>
-Using ResNet50 with image 2 received a root mean square error score of 65.48362.<br>
-Using ResNet101 with image 0 received a root mean square error score of 65.96393.<br>
-Using ResNet18 with image 0 received a root mean square error score of 66.22581.<br>
-Using ResNet50 with image 0 received a root mean square error score of 66.72329.<br>
+Using ResNet50 with image 0 with 25 epochs received a root mean square error score of 0.01072.<br>
+Using ResNet50 with image 0 with 15 epochs received a root mean square error score of 0.01815.<br>
+Using ResNet50 with image 2 with 20 epochs received a root mean square error score of 0.02464.<br>
+Using ResNet50 with image 0 with 30 epochs received a root mean square error score of 0.0269.<br>
+Using ResNet50 with image 0 with 40 epochs received a root mean square error score of 0.03257.<br>
+Using ResNet50 with image 0, 1, 2 combined using image 0 as test x received a root mean square error score of 0.03367.<br>
+Using ResNet50 with image 1 with 20 epochs received a root mean square error score of 0.03531.<br>
+
 
 ### discussion
 Using ResNet50 with image 0, 1, 2 seem to perform better than others since it learned from not only one view of the robot hand, but three different views.
