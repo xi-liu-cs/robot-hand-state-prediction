@@ -42,7 +42,7 @@ model_scripted.save('res50_pretrained_model.pt') # save model
 sub = submission.Submission()
 df = sub.submit(filename = 'preprocessed_testX.joblib', modelname = 'res50_pretrained_model.pt)
 ```
-```
+```python
 class Block(nn.Module):
     expansion = 1
 
