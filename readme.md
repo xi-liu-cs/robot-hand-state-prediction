@@ -42,11 +42,11 @@ model_scripted.save('res50_pretrained_model.pt') # save model
 sub = submission.Submission()
 df = sub.submit(filename = 'preprocessed_testX.joblib', modelname = 'res50_pretrained_model.pt)
 ```
-let $\mathcal{F}$ be the class of functions the the network architecture can satisfy 
 ```math
 \displaylines
 {
-\forall f \in \mathcal{F}, \exists \text{ weights, biases that can be obtained through training }\\
+\text{let $\mathcal{F}$ be the class of functions the the network architecture can satisfy}\\
+\forall f \in \mathcal{F}, \exists \text{ weights, biases that can be obtained through training}\\
 \text{let $f ^ *$ be the truth function to be find, usually $f ^ * \not\in \mathcal{F}$, so find a $f_{\mathcal{F}} ^ * \in \mathcal{F}$ that is close to $f$}\\
 L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}\\
 \text{weights of neural network}\\
@@ -58,7 +58,8 @@ L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ 
 \text{so use nested function classes } \mathcal{F}_1 \subset ... \subset \mathcal{F}_{n \in \mathbb{N}}\\
 \text{so if smaller function classes are subsets of the larger function classes, we can obtain more closeness to $f ^ *$ as we increase $\mathcal{F}$}\\
 \text{so train the new layers into identity function } f(\mathbf{x}) = \mathbf{x} \text{ as one of the elements in each additional layer using a residual block}\\
-\text{let $\mathbf{x}$ be input, $f(\mathbf{x})$ be the underlying mapping that we desire to be learned as the input to the top activation function}\\
+\text{let $\mathbf{x}$ be input, $f(\mathbf{x})$ be the underlying mapping that we desire to be learned as the input to the top activation function}, f(\mathbf{x}) = g(\mathbf{x}) + \mathbf{x}\\
+\text{suppose a function class $\mathcal{F}$ need to learn the mapping $f(\mathbf{x})$, the larger function class $\mathcal{F'}$ need to learn the residual mapping $g(\mathbf{x}) = f(\textbf{x}) - \textbf{x}$}
 }
 ```
 ```python
