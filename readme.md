@@ -111,7 +111,7 @@ vec3 conv2d(mat3 kernel, sampler2D s, vec2 uv)
     {
         mat3 region_channel = region[i],
         c = matrix_component_multiply(kernel, region_channel);
-        float r = c[0][0] + c[0][1] + c[0][2]
+        frag[i] = c[0][0] + c[0][1] + c[0][2]
                 + c[1][0] + c[1][1] + c[1][2]
                 + c[2][0] + c[2][1] + c[2][2];
     }
