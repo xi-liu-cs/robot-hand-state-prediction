@@ -43,7 +43,7 @@ sub = submission.Submission()
 df = sub.submit(filename = 'preprocessed_testX.joblib', modelname = 'res50_pretrained_model.pt)
 ```
 ```math
-f_{\mathscr{F}} ^ * = \argmin_f L(X, y, f) \text{ subject to } f \in \mathscr{F}
+f_{\mathscr{F}} ^ * = arg\,min_f L(X, y, f) \text{ subject to } f \in \mathscr{F}
 ```
 
 ### experimental results
