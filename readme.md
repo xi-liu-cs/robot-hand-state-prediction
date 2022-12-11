@@ -54,4 +54,4 @@ Using ResNet18 with image 0 received a root mean square error score of 66.22581.
 
 
 ### future work
-It seems there are a lot of performance penalty due to the implementation of the language. For example, it took a lot of time to preprocess the data and traverse through the dataset. It would be a lot faster if the data is organized better and store in memory in a way that have better spatial and temporal locality. In the future, it seems C, C++, and CUDA would be a better choice not only for preprocessing but also for training. 
+It seems there are a lot of performance penalty due to the implementation of the language. For example, it took a lot of time to preprocess the data and traverse through the dataset. It would be a lot faster if the data is organized better and store in memory in a way that have better spatial and temporal locality. In the future, it seems C++ CUDA would be a better choice not only for preprocessing but also for training. 
