@@ -52,7 +52,7 @@ Using ResNet18 with image 0 received a root mean square error score of 66.22581.
 Using ResNet50 with image 0 received a root mean square error score of 66.72329.<br>
 
 ### discussion
-
+Using ResNet50 with image 0, 1, 2 seem to perform better than others since it learned from not only one view of the robot hand, but three different views.
 
 ### future work
-It seems there are a lot of performance penalty due to the implementation of the language. For example, it took a lot of time to preprocess the data and traverse through the dataset. It would be a lot faster if the data is organized better and store in memory in a way that have better spatial and temporal locality. In the future, it seems C++ CUDA would be a better choice not only for preprocessing but also for training. Using the current approach, some time there would be run out of memory problem if saving the entire dataset as a malloced array in heap at once. In the future, load only when the training loop started to use the portion of the data.
+It seems there are a lot of performance penalty due to the implementation of the language and the Torch library. For example, it took a lot of time to preprocess the data and traverse through the dataset. It would be a lot faster if the data is organized better and store in memory in a way that have better spatial and temporal locality. In the future, it seems C++ CUDA would be a better choice not only for preprocessing but also for training. Using the current approach, some time there would be run out of memory problem if saving the entire dataset as a malloced array in heap at once. In the future, load only when the training loop started to use the portion of the data.
