@@ -2,7 +2,7 @@
 Xi Liu<br>
 This project is done for machine learning course at New York University in 2022 fall.<br>
 State prediction given RGBD (RGB + Depth) images. The input is RGBD images of top view robot hand, after the use of several supervised learning algorithms, the output is vertex positions of each finger in meters.<br>
-Each sample is made of three images from three different views. A custom dataset class is defined for lazy loading to deal with out of memory issue.
+Each sample is made of three images from three different views. A custom dataset class is defined for lazy loading to deal with out of memory issue to load only when the training iteration started to use the portion of the data.
 
 ## method
 ### data preprocessing
@@ -55,4 +55,4 @@ Using ResNet50 with image 0 received a root mean square error score of 66.72329.
 Using ResNet50 with image 0, 1, 2 seem to perform better than others since it learned from not only one view of the robot hand, but three different views.
 
 ### future work
-It seems there are a lot of performance penalty due to the implementation of the language and the Torch library. For example, it took a lot of time to preprocess the data and traverse through the dataset. It would be a lot faster if the data is organized better and stored in memory in a way that have better spatial and temporal locality. In the future, a combination of C++, CUDA, and GLSL would be a better choice for training and preprocessing, in which training the convolutional neural network would be done inside the fragment shader exploiting the parallelism of GPUs. Using the current approach, some time there would be run out of memory problem if saving the entire dataset as a malloced array in heap at once. In the future, load only when the training iteration started to use the portion of the data.
+It seems there are a lot of performance penalty due to the implementation of the language and the Torch library. For example, it took a lot of time to preprocess the data and traverse through the dataset. It would be a lot faster if the data is organized better and stored in memory in a way that have better spatial and temporal locality. In the future, a combination of C++, CUDA, and GLSL would be a better choice for training and preprocessing, in which training the convolutional neural network would be done inside the fragment shader exploiting the parallelism of GPUs.
