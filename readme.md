@@ -66,7 +66,7 @@ L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ 
 \text{the larger function class $\mathcal{F'}$ need to learn the residual mapping $g(\mathbf{x}) = f(\textbf{x}) - \textbf{x}$}\\
 \text{if the desired mapping is the identity } f(\mathbf{x}) = \mathbf{x}, \text{then the residual mapping becomes } g(\mathbf{x}) = 0\\
 \text{then only need to make the weights and biases of convolutional layer and fully connected layer to zero.}\\
-\text{through the residual connects across layers of residual blocks, inputs can have a faster forward propagation.}
+\text{through the residual connections across layers of residual blocks, inputs can have a faster forward propagation.}
 }
 ```
 ```python
