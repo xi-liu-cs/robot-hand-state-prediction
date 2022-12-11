@@ -37,6 +37,10 @@ dump(train_img0, 'preprocessed_testX.joblib')
 start to train the model by calling ```cnn_model.main()```, many residual neural network architectures are used, including ResNet18, ResNet34, ResNet50, ResNet101, and ResNet152.
 ```python
 cnn_model = cnn_model.main(loadname = 'lx_preprocessed_data0.joblib', pre_trained_model = None)
+model_scripted = torch.jit.script(cnn_model)
+model_scripted.save('res50_pretrained_model.pt') # save model
+sub = submission.Submission()
+df = sub.submit(filename = 'preprocessed_testX.joblib', modelname = 'res50_pretrained_model.pt)
 ```
 
 ### experimental results
