@@ -44,8 +44,8 @@ df = sub.submit(filename = 'preprocessed_testX.joblib', modelname = 'res50_pretr
 ```
 let $\mathcal{F}$ be the class of functions the the network architecture can satisfy 
 ```math
-\forall f \in \mathcal{F}, \exists \text{ weights } w, \text{ biases } b\\
-f_{\mathcal{F}} ^ * = arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}\\
+\forall f \in \mathcal{F}, \exists \text{ weights } w, \text{ biases } b<br>
+f_{\mathcal{F}} ^ * = arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}<br>
 
 ```
 
