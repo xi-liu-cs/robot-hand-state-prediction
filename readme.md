@@ -103,7 +103,7 @@ Using ResNet50 with image 1 with 20 epochs received a root mean square error sco
 ### discussion
 Using ResNet50 with image 0 with 20 epochs received a root mean square error score of 0.00707. Unexpectedly, using image 0 performed better than using all of image 0, 1, 2 at the same time. Intuitively, one might think that using three images together would have a lower error since it learned from not only one view of the robot hand, but three different views, but it seems that optimization is not so straightforward. After a threshold of epochs, the root mean square error increased, this might be due to overfitting.
 ```glsl
-vec3 conv(mat3 kernel, sampler2D s, vec2 uv)
+vec3 conv2d(mat3 kernel, sampler2D s, vec2 uv)
 {
     vec3 frag;
     mat3[] region = region3x3(s, uv);
