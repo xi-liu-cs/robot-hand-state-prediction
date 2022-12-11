@@ -42,6 +42,25 @@ model_scripted.save('res50_pretrained_model.pt') # save model
 sub = submission.Submission()
 df = sub.submit(filename = 'preprocessed_testX.joblib', modelname = 'res50_pretrained_model.pt)
 ```
+let $\mathcal{F}$ be the class of functions the the network architecture can satisfy 
+```math
+\displaylines
+{
+\forall f \in \mathcal{F}, \exists \text{ weights, biases that can be obtained through training }\\
+\text{let $f ^ *$ be the truth function to be find, usually $f ^ * \not\in \mathcal{F}$, so find a $f_{\mathcal{F}} ^ * \in \mathcal{F}$ that is close to $f$}\\
+L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}\\
+\text{weights of neural network}\\
+\{\alpha_{0m}, \alpha_m; m = 1, 2, ..., M \in \mathbb{N}\} \quad M(p + 1) \text{ weights }\\
+\{\beta_{0k}, \beta_k; k = 1, 2, ..., K \in \mathbb{N}\} \quad K(M + 1) \text{ weights }\\
+\text{sum of squares error} \quad R(\theta) = \sum_{k = 1} ^ K \sum_{i = 1} ^ N (y_{ik} - f_k(x_i)) ^ 2\\
+\text{suppose there is a better architecture } \mathcal{F'}, \sup\{|f_{\mathcal{F'}} ^ *| - |f ^ *|\} < \sup\{|f_{\mathcal{F}} ^ *| - |f ^ *|\}\\
+\text{but, if $\mathcal{F} \not\subset \mathcal{F'}, f_{\mathcal{F'}} ^ *$ move closer to $f ^ *$ is not guaranteed to happen with a larger function class}\\
+\text{so use nested function classes } \mathcal{F}_1 \subset ... \subset \mathcal{F}_{n \in \mathbb{N}}\\
+\text{so if smaller function classes are subset of the larger function classes, we can obtain more closeness to $f ^ *$ as we increase $\mathcal{F}$}\\
+\text{let $\mathbf{x}$ be input, $f(\mathbf{x})$ be the underlying mapping that we desire to be learned as the input to the top activation function}\\
+
+}
+```
 ```python
 class Block(nn.Module):
     expansion = 1
@@ -57,22 +76,6 @@ class Block(nn.Module):
         self.i_downsample = i_downsample
         self.stride = stride
         self.relu = nn.ReLU()
-```
-let $\mathcal{F}$ be the class of functions the the network architecture can satisfy 
-```math
-\displaylines
-{
-\forall f \in \mathcal{F}, \exists \text{ weights, biases that can be obtained through training }\\
-\text{let $f ^ *$ be the truth function to be find, usually $f ^ * \not\in \mathcal{F}$, so find a $f_{\mathcal{F}} ^ * \in \mathcal{F}$ that is close to $f$}\\
-L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ subject to } f \in \mathcal{F}\\
-\text{weights of neural network}\\
-\{\alpha_{0m}, \alpha_m; m = 1, 2, ..., M \in \mathbb{N}\} \quad M(p + 1) \text{ weights }\\
-\{\beta_{0k}, \beta_k; k = 1, 2, ..., K \in \mathbb{N}\} \quad K(M + 1) \text{ weights }\\
-\text{sum of squares error} \quad R(\theta) = \sum_{k = 1} ^ K \sum_{i = 1} ^ N (y_{ik} - f_k(x_i)) ^ 2\\
-\text{suppose there is a better architecture } \mathcal{F'}, \sup\{|f_{\mathcal{F'}} ^ *| - |f ^ *|\} < \sup\{|f_{\mathcal{F}} ^ *| - |f ^ *|\}\\
-\text{but, if $\mathcal{F} \not\subset \mathcal{F'}, f_{\mathcal{F'}} ^ *$ move closer to $f ^ *$ is not guaranteed to happen with a larger function class}\\
-\text{so use nested function classes } \mathcal{F}_1 \subset ... \subset \mathcal{F}_{n \in \mathbb{N}}\\
-}
 ```
 
 ### experimental results
