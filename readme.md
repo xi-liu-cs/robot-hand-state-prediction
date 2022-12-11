@@ -60,6 +60,8 @@ L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ 
 \text{so train the new layers into identity function } f(\mathbf{x}) = \mathbf{x} \text{ as one of the elements in each additional layer using a residual block}\\
 \text{let $\mathbf{x}$ be input, $f(\mathbf{x})$ be the underlying mapping that we desire to be learned as the input to the top activation function}, f(\mathbf{x}) = g(\mathbf{x}) + \mathbf{x}\\
 \text{suppose a function class $\mathcal{F}$ need to learn the mapping $f(\mathbf{x})$, the larger function class $\mathcal{F'}$ need to learn the residual mapping $g(\mathbf{x}) = f(\textbf{x}) - \textbf{x}$}\\
+\text{if the desired mapping is the identity } f(\mathbf{x}) = \mathbf{x}, \text{then the residual mapping becomes } g(\mathbf{x}) = 0\\
+\text{then only need to make the weights and biases of convolutional layer and fully connected layer to zero.}\\
 }
 ```
 ```python
