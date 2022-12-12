@@ -106,7 +106,7 @@ L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ 
 \theta \text{ is full set of weights, sum of squares error is } R(\theta) = \sum_{k = 1} ^ K \sum_{i = 1} ^ N (y_{ik} - f_k(x_i)) ^ 2\\
 \text{suppose there is a architecture with a larger function class }\mathcal{F'},\\
 \sup\{|f_{\mathcal{F'}} ^ *| - |f ^ *|\} < \sup\{|f_{\mathcal{F}} ^ *| - |f ^ *|\} \text{ is not guaranteed}\\
-\text{but, if $\mathcal{F} \not\subset \mathcal{F'}, f_{\mathcal{F'}} ^ *$ move closer to $f ^ *$ is not guaranteed with a larger function class}\\
+\text{if $\mathcal{F} \not\subset \mathcal{F'}, f_{\mathcal{F'}} ^ *$ move closer to $f ^ *$ is not guaranteed with a larger function class}\\
 \text{so use nested function classes } \mathcal{F}_1 \subset ... \subset \mathcal{F}_{n \in \mathbb{N}}\\
 \text{so if smaller function classes are subsets of the larger function classes,}\\
 \text{we can obtain more closeness to $f ^ *$ as we increase $\mathcal{F}$}\\
