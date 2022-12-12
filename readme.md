@@ -106,9 +106,7 @@ and store the sum of products into each entry of the output matrix.
 ```math
 \displaylines
 {
-\text{let } f(x, y) \text{ be the original input image}\\
-\omega \text{ be the weight filter kernel}\\
-g(x, y) \text{ be the output filtered image}\\
+\text{let } f(x, y) \text{ be the original input image}, \omega \text{ be the weight filter kernel}, g(x, y) \text{ be the output filtered image}
 g(x, y) = \omega * f(x, y) = \sum_{dx = -a} ^ a \sum_{dy = -b} ^ b \omega (dx, dy) f(x -dx, y - dy)\\
 }
 ```
