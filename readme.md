@@ -90,7 +90,7 @@ class Block(nn.Module):
 ```
 
 
-### experimental results
+## experimental results
 image 0, 1, 2 represent 3 images of 3 different views in each sample<br>
 Using ResNet50 with image 0 with 20 epochs received a root mean square error score of 0.00707.<br>
 Using ResNet50 with image 0 with 25 epochs received a root mean square error score of 0.01072.<br>
@@ -103,7 +103,7 @@ Using ResNet50 with image 0, 1, 2 combined using image 0 as test x received a ro
 Using ResNet50 with image 1 with 20 epochs received a root mean square error score of 0.03531.<br>
 
 
-### discussion
+## discussion
 Using ResNet50 with image 0 with 20 epochs received a root mean square error score of 0.00707. Unexpectedly, using image 0 performed better than using all of image 0, 1, 2 at the same time. Intuitively, one might think that using three images together would have a lower error since it learned from not only one view of the robot hand, but three different views, but it seems that optimization is not so straightforward. After a threshold of epochs, the root mean square error increased, this might be due to overfitting. The reason why using only image 0 performed better than using all of image 0, 1, 2 at the same time might be due to the implementation of the convolutional neural network (an implementation in the fragment shader is shown below) since the there is a high amount of variability among the different views of the robot hand. When using three images at the same time, the original information locality among adjacent pixels are disturbed as compared with using only one view from one image in each sample, since the convolution layer performs convolution operation each time between a small portion of the input matrix with a kernel matrix
 and store the sum of products into each entry of the output matrix.
 ```math
@@ -130,5 +130,5 @@ vec3 conv2d(mat3 kernel, sampler2D s, vec2 uv)
 }
 ```
 
-### future work
+## future work
 It seems there are a lot of performance penalty in terms of time taken due to the implementation of the language and the Torch library. For example, it took a lot of time to preprocess the data and traverse through the dataset. It would be a lot faster if the data is organized better and stored in memory in a way that have better spatial and temporal locality. In the future, a combination of C++, CUDA, and GLSL would be a better choice for training and preprocessing, in which training the convolutional neural network would be done inside the fragment shader exploiting the parallelism of GPUs.
