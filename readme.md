@@ -56,8 +56,8 @@ L\text{ is loss function} , f_{\mathcal{F}} ^ * := arg\,min_f L(X, y, f) \text{ 
 \{\alpha_{0m}, \alpha_m; m = 1, 2, ..., M \in \mathbb{N}\} \quad M(p + 1) \text{ weights }\\
 \{\beta_{0k}, \beta_k; k = 1, 2, ..., K \in \mathbb{N}\} \quad K(M + 1) \text{ weights }\\
 \theta \text{ is full set of weights, sum of squares error is } R(\theta) = \sum_{k = 1} ^ K \sum_{i = 1} ^ N (y_{ik} - f_k(x_i)) ^ 2\\
-\text{suppose there is a better architecture } \mathcal{F'}, \sup\{|f_{\mathcal{F'}} ^ *| - |f ^ *|\} < \sup\{|f_{\mathcal{F}} ^ *| - |f ^ *|\}\\
-\text{but, if $\mathcal{F} \not\subset \mathcal{F'}, f_{\mathcal{F'}} ^ *$ move closer to $f ^ *$ is not guaranteed with a larger function class}\\
+\text{suppose there is a architecture with a larger function class } \mathcal{F'}, \sup\{|f_{\mathcal{F'}} ^ *| - |f ^ *|\} < \sup\{|f_{\mathcal{F}} ^ *| - |f ^ *|\} \text{ is not guaranteed}\\
+\text{if $\mathcal{F} \not\subset \mathcal{F'}, f_{\mathcal{F'}} ^ *$ move closer to $f ^ *$ is not guaranteed with a larger function class}\\
 \text{so use nested function classes } \mathcal{F}_1 \subset ... \subset \mathcal{F}_{n \in \mathbb{N}}\\
 \text{so if smaller function classes are subsets of the larger function classes,}\\
 \text{we can obtain more closeness to $f ^ *$ as we increase $\mathcal{F}$}\\
