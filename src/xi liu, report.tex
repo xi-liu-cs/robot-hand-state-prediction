@@ -187,4 +187,17 @@ vec3 conv2d(mat3 kernel, sampler2D s, vec2 uv)
 \\
 future work\\
 It seems there are a lot of performance penalty in terms of time taken due to the implementation of the language and the Torch library. For example, it took a lot of time to preprocess the data and traverse through the dataset. It would be a lot faster if the data is organized better and stored in memory in a way that have better spatial and temporal locality. In the future, a combination of C++, CUDA, and GLSL would be a better choice for training and preprocessing, in which training the convolutional neural network would be done inside the fragment shader exploiting the parallelism of GPUs.
+\\
+\\
+\\
+reference\\
+Coates, Adam. Deep Learning with COTS HPC Systems\\
+- Arxiv. http://proceedings.mlr.press/v28/coates13.pdf.\\
+\\
+Zhang, Jian. Deep Learning at 15PF: Supervised and Semi-Supervised Classification for Scientific Data\\
+- Arxiv. https://arxiv.org/pdf/1708.05256v1.pdf.\\
+\\
+He, Kaiming. Deep Residual Learning for Image Recognition\\
+- Arxiv. https://arxiv.org/pdf/1512.03385.pdf.\\
+\\
 \end{document}
