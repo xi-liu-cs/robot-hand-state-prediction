@@ -3,6 +3,9 @@ Xi Liu<br>
 This project is done for machine learning course at New York University in 2022 fall.<br>
 State prediction given RGBD (RGB + Depth) images. The input is RGBD images of top view robot hand, after the use of several supervised learning algorithms, the output is vertex positions of each finger in meters.<br>
 Each sample is made of three images from three different views. A custom dataset class is defined for lazy loading to deal with out of memory issue to load only when the training iteration started to use the portion of the data.
+![0](a/image/0.png)
+![1](a/image/1.png)
+![2](a/image/2.png)
 
 ## method
 ### data preprocessing
