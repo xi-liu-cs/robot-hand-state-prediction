@@ -91,7 +91,7 @@ class Block(nn.Module):
 
 
 ## experimental results
-image 0, 1, 2 represent 3 images of 3 different views in each sample<br>
+image 0, 1, 2 represent 3 images of 3 different views in each sample.<br>
 Using ResNet50 with image 0 with 20 epochs received a root mean square error score of 0.00707.<br>
 Using ResNet50 with image 0 with 25 epochs received a root mean square error score of 0.01072.<br>
 Using ResNet50 with image 0 with 22 epochs received a root mean square error score of 0.0149.<br>
